@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation System</h1>
+        <div id="movie-input">
+            <input type="text" id="movie-name" placeholder="Enter Movie Name">
+            <input type="number" id="movie-rating" min="1" max="5" placeholder="Rating (1-5)">
+            <button onclick="addMovie()">Add</button>
+        </div>
+        <ul id="movie-list"></ul>
+        <button onclick="getRecommendations()">Get Recommendations</button>
+        <div id="results"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
